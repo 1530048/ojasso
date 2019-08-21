@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vetanimals</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" type="text/css" href="css/css-menu.css">
+</head>
+<body background="img/back1.jpg">
+	
+	<header>
+
+		<div>
+			<img class="logo" src="img/logoConfondo.png" onclick="location.href='index.html'">
+		</div>
+		<div>
+			<div id="sidebar" class="sidebar">
+    			<a href="#" class="boton-cerrar" onclick="ocultar()">&times;</a>
+				<ul class="menu">
+    				<li><a href="#" onclick="location.href='registro_paciente.html'">Registro</a></li>
+    				<li><a href="#"onclick="location.href='registrados.php'">Registrados</a></li>
+    				<li><a href="#"onclick="location.href='consulta.html'">Consulta</a></li>
+    				<li><a href="#"onclick="location.href='urgencias.html'">Urgencias</a></li>
+    				<li><a href="#"onclick="location.href='citas.html'">Citas</a></li>
+    				<li><a href="#"onclick="location.href='internados.html'">Internados</a></li>
+    				<li><a href="#"onclick="location.href='servicios.html'">Servicios</a></li>
+    				<li><a href="#"onclick="location.href='historial.html'">Historial</a></li>
+    				<li><a href="#"onclick="location.href='inventario.html'">Inventario</a></li>
+    				<li><a href="#"onclick="location.href='pago.html'">Pago</a></li>
+        			<li><a href="#"onclick="location.href='login.html'">Cerrar sesion</a></li>
+
+				</ul>
+			</div>
+
+			<div id="contenido">
+  				<p><a> <alt="menu" style="border-width: 0px"/></a></p>
+  				<a id="abrir" class="abrir-cerrar" href="javascript:void(0)" onclick="mostrar()"><img src="img/menu.png" width="30" height="30">
+  				</a><a id="cerrar" class="abrir-cerrar" href="#" onclick="ocultar()"><img src="img/menu.png" width="30" height="30"></a>
+			</div>
+		</div>
+	</header>
+
+	<h1 class="tituloModulo">Registro de paciente</h1>
+
+	<section>
+		<form action="php/registro_paciente.php" method="POST" class="registroPaciente"><b>
+
+			<div>
+				<h2 class="tituloRegistro">Datos del paciente</h2><br>
+			</div>
+
+			<!-- Nombre mascota -->
+			<div>
+				<label for="nombre">Nombre de la mascota</label>
+				<input type="text" name="nombre_paciente" maxlength="50" required>
+			</div><br>
+
+			<!-- Edad -->
+			<div>
+				<label for="edad">Edad</label>
+				<input type="number" name="edad" id="edad" required min="0">
+			</div><br>
+
+			<!-- Sexo -->
+			<div>
+				<label for="genero">Sexo</label>
+				<input type="radio" name="sexo" id="genero" value="Macho" required>Macho
+				<input type="radio" name="sexo" id="genero" value="Hembra" required>Hembra 
+			</div><br>
+
+			<!-- Raza -->
+			<div>
+				<label for="raza">Raza</label>
+				<input type="text" name="raza" placeholder="Raza" maxlength="50" required>
+			</div><br>
+
+			<!-- Color -->
+			<div>
+				<label for="color">Color</label>
+				<input type="text" name="color" id="mi_color" maxlength="50" required>
+			</div><br>
+
+			<!-- Peso -->
+			<div>
+				<label for="peso">Peso</label>
+				<input type="number" step="0.01" name="peso" id="peso" required min="0">
+			</div><br>
+
+			<div>
+				<h2 class="tituloRegistro">Alimento</h2>
+			</div><br>
+
+			<!-- Alimento -->
+			<div>
+				<label for="alimento">Nombre de alimento</label>
+				<input type="text" name="nombre_alimento" maxlength="80">
+			</div><br>
+
+			<div>
+				<label for="alimento">Tipo de alimento</label>
+				<input type="text" name="tipo_alimento" maxlength="80">
+			</div><br>
+
+			<!-- Cantidad de alimento -->
+			<div>
+				<label for="cantAlimento">Cantidad de alimento</label>
+				<input type="number" step="0.01" name="cantidad_alimento" id="cantAlimento" required min="0">
+			</div><br>
+
+			<!-- Vacunas -->
+			<div>
+				<h2 class="tituloRegistro">Vacunas</h2>
+			</div><br>
+
+			<div>
+				<label for="vacuna">Nombre de la vacuna</label>
+				<input type="text" name="nombre_vacuna" maxlength="50" id="vacuna">
+			</div><br>
+
+			<!--Fecha de aplicación -->
+			<div>
+				<label for="fechaAplicacion">Fecha de aplicación</label>
+				<input type="date" name="fecha_aplicacionv" id="fechaAplicacion" id="fechaAplicacion">
+			</div><br>
+
+			<!-- Desparacitaciones -->
+			<div>
+				<h2 class="tituloRegistro">Desparacitaciones</h2>
+			</div><br>
+
+			<!-- Producto -->
+			<div>
+				<label for="producto">Producto</label>
+				<input type="text" name="producto" maxlength="100" id="prod">
+			</div><br>
+
+			<!--Fecha de aplicación -->
+			<div>
+				<label>Fecha de aplicación</label>
+				<input type="date" name="fecha_aplicaciond" id="fechaAplicacion1">
+			</div><br>
+
+			<div> 
+				<h2 class="tituloRegistro">Datos del dueño</h2>
+			</div><br>
+
+			<!-- Nombre del dueño -->
+			<div>
+				<label for="nombreDueño">Nombre</label>
+				<input type="text" name="nombre" maxlength="50" required>
+			</div><br>
+
+			<!-- Domicilio -->
+			<div>
+				<label for="domicilio">Apellido</label>
+				<input type="text" name="apellido" maxlength="50" required>
+			</div><br>
+
+			<!-- Colonia -->
+			<div>
+				<label for="colonia">Domicilio</label>
+				<input type="text" name="domicilio" maxlength="100" required>
+			</div><br>
+
+			<!-- telefono -->
+			<div>
+				<label for="telefono">Teléfono</label>
+				<input type="text" name="telefono" id="telefono" required>
+			</div><br>
+
+			<div>
+				<input type="submit" name="Guardar" id="Guardar" value="Guardar" onclick="location.href='registro_paciente.html'">
+			</div>
+
+		</form>
+
+		</b>
+	</section>
+<script  src="js/menu-desp.js"></script>
+<script  src="js/registro.js"></script>
+
+</body>
+</html>

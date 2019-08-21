@@ -1,0 +1,146 @@
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 10;
+    z-index: 1;
+    background-color: rgb(53,204,174);
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding: 1rem 0;
+    box-sizing:border-box;
+}
+
+.sidebar .boton-cerrar {
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    font-size: 2rem;
+    display: block;
+    padding: 0;
+    line-height: 1.5rem;
+    margin: 0;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.sidebar ul, .sidebar li{
+    margin:0;
+    padding:0;
+    list-style:none inside;
+}
+
+.sidebar ul {
+    margin: 4rem auto;
+    display: block;
+    width: 80%;
+    min-width:200px;
+}
+
+.sidebar a {
+    display: block;
+    font-size: 120%;
+    color: #eee;
+    text-decoration: none;
+    
+}
+
+.sidebar a:hover{
+    color:white;
+    background-color: purple;
+
+}
+
+#contenido {
+    transition: margin-left .4s;
+    padding: 0.01rem;
+}
+
+.abrir-cerrar {
+    color: black;
+    font-size:1rem;   
+}
+
+#abrir {
+    
+}
+#cerrar {
+    display:none;
+}
+
+
+
+
+
+
+.sidebar1 {
+    position: fixed;
+    height: 100;
+    width:0;
+    top: 0;
+    left: 100;
+    z-index: 1;
+    background-color: rgb(53,204,174);
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding: 1rem 0;
+    box-sizing:border-box;
+}
+
+.sidebar1 .boton-cerrar1 {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 2rem;
+    display: block;
+    padding: 0;
+    line-height: 1.5rem;
+    margin: 0;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.sidebar1 ul, .sidebar1 li{
+    margin:0;
+    padding:0;
+    list-style:none inside;
+}
+
+.sidebar1 ul {
+    margin: 4rem auto;
+    display: block;
+    width: 80%;
+    min-width:200px;
+}
+
+.sidebar1 a {
+    display: block;
+    font-size: 120%;
+    color: #eee;
+    text-decoration: none;
+    
+}
+
+.sidebar1 a:hover{
+    color:white;
+    background-color: purple;
+
+}
+#contenido1 {
+    transition: margin-left .4s;
+    padding: 1rem;
+}
+
+.abrir-cerrar1 {
+    color: black;
+    font-size:1rem;   
+}
+
+#cerrar1 {
+    display:none;
+}

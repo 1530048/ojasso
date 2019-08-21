@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vetanimals</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<body background="img/back1.jpg">
+
+	<header>
+		<div>
+			<img class="logo" src="img/logoConfondo.png">
+		</div>
+	</header>
+	
+	<form class="login">	
+		<div class="FormLoginPArriba">
+			<div>
+				<h1 id="ini">Inicio de sesión</h1>
+			</div>
+		</div>
+
+		<div class="FormLoginText">
+			<div>
+				<label for="nombre"></label><br>
+				<img src="img/user.png" width="5%" height="5%">
+				<input id="name" type="text" name="nombre" placeholder="Nombre de usuario" maxlength="50" oninput="validaciones(id);" required>
+				<label id="mensaje_usr"></label>
+			</div><br>
+
+			<div>
+				<label for="contrasena"></label>
+				<img src="img/key.png" width="5%" height="5%">
+				<input type="password" name="contrasena" placeholder="Contraseña" id="contrasena" maxlength="8" oninput="validaciones(id);" required>
+				<br>
+				<label>max. 8 digitos (debe contener minimo una </label> <br>
+				<label>mayuscula o minuscula y un numero).</label> <br> 
+				<label id="mensaje_pass"></label>
+
+			</div><br>
+
+			<div>
+				
+				<input type="submit" name="Ingresar" id="Ingresar" value="Ingresar" onclick="location.href='index.html'">
+
+				<!--<a href="index.html"> <input type="submit" name="Ingresar" id="Ingresar" value="Ingresar"/> </a> -->
+
+			</div>	
+		</div>
+	</form>
+	<script type="text/javascript" src="js/scriptlogin.js"></script>
+</body>
+</html>

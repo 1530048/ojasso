@@ -1,0 +1,482 @@
+/* G E N E R A L */
+
+body{
+  font-family: "Calibri";
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  background-color: rgb(195,84,234);
+  color: white;
+  width: 100%;
+  height: 60px;
+}
+
+.imgMenu{
+  float: left;
+  width: 3%;
+  padding-top: 9px;
+  padding-left: 20px;
+  margin-left: 20px;
+  border-left: 20px;
+}
+
+.imgUser{
+  float: left;
+  padding-left: 40px;
+  padding-top: 15px;
+  width: 2%;
+}
+
+.logo{
+  float: right;
+  width: 12.8%;
+  margin: 0;
+  padding: 0;
+}
+
+.Acciones{
+  width: 70%;
+}
+
+.tituloModulo{
+  padding-left: 70px;
+}
+
+.registrados, .internados, .urgencias, .inventario{
+  background-color: white;
+  width: 90%;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.filaArriba{
+  background-color: rgb(53,204,174);
+  display: table-row; 
+  font-weight: bolder;
+  text-align: center;
+}
+
+.fila{
+  display: table-row;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 0px;
+  text-align: justify;
+}
+
+.columna{
+  width: 20%;
+  display: table-cell;
+  border-bottom: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  padding-bottom: 0px;
+  font-size: 0.8rem;
+  padding: 10px;
+  text-align: center;
+}
+
+#Nuevo{
+  background-color: rgb(182,79,232);
+  font-size: 14px;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  width: 7%;
+  height: 30px;
+  float: right;
+  margin-right: 10px;
+  margin-top: 40px;
+}
+
+
+#Guardar{
+  background-color: rgb(182,79,232);
+  font-size: 18px;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  width: 25%;
+  height: 30px;
+  float: right;
+  margin-right: 150px;
+  margin-top: 10px;
+}
+
+
+/* L O G I N */
+
+.FormLoginPArriba{
+  background-color: rgb(195,84,234);
+  color: white;
+  width: 380px;
+  height: 80px;
+  text-align: center;
+  padding-top: 5px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.FormLoginText{
+  background: rgb(238,233,240);
+  text-align: center;
+  width: 360px;
+  height: 180px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+#Ingresar{
+  background-color: rgb(182,79,232);
+  font-size: 18px;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  width: 25%;
+  height: 30px;
+}
+
+#name, #contrasena{
+  font-size: 16px;
+  border-radius: 2px;
+  border: 0;
+  width: 80%;
+  height: 30px;
+  padding-left: 10px;
+}
+
+/* termina L O G I N */
+
+
+
+
+
+
+/* I N D E X */
+
+.index{
+  color: white;
+  width: 80%;
+  height: 300px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.modulo1{
+  background-color: rgb(124,163,232);
+  width: 120px;
+  height: 120px;
+  border-radius: 10%;
+  float: left;
+}
+
+.modulo2{
+  background-color: rgb(211,211,94);
+  width: 120px;
+  height: 120px;
+  border-radius: 10%;
+  margin: 0 auto;
+  margin-left: 250px;
+}
+
+.modulo3{
+  background-color: rgb(139,143,217);
+  width: 120px;
+  height: 120px;
+  border-radius: 10%;
+  margin-left: 490px;
+  margin-top: -120px;
+}
+
+.modulo4{
+  background-color: rgb(94,211,156);
+  width: 120px;
+  height: 120px;
+  border-radius: 10%;
+  margin-left: 730px;
+  margin-top: -120px;
+}
+
+.modulo5{
+  background-color: rgb(217,139,139);
+  width: 120px;
+  height: 120px;
+  border-radius: 10%;
+  float: right;
+  margin-top: -120px;
+}
+
+.modulo6{
+  background-color: rgb(94,211,123);
+  width: 120px;
+  height: 120px;
+  border-radius: 10%;
+  float: left;
+  margin-top: 60px;
+}
+
+.modulo7{
+  background-color: rgb(110,227,201);
+  width: 120px;
+  height: 120px;
+  border-radius: 10%;
+  margin: 0 auto;
+  margin-right: 720px;
+  margin-top: 60px;
+}
+
+.modulo8{
+  background-color: rgb(232,124,168);
+  width: 120px;
+  height: 120px;
+  border-radius: 10%;
+  margin: 0 auto;
+  margin-top: -120px;
+  margin-left: 490px;
+}
+
+.modulo9{
+  background-color: rgb(227,169,110);
+  width: 120px;
+  height: 120px;
+  border-radius: 10%;
+  margin: 0 auto;
+  margin-top: -120px;
+  margin-left: 730px;
+}
+
+.modulo10{
+  background-color: rgb(211,144,243);
+  width: 120px;
+  height: 120px;
+  border-radius: 10%;
+  float: right;
+  margin-top: -120px;
+}
+
+
+.icono{
+  padding-top: 30px;
+  width: 40%;
+  height: 40%;
+}
+
+.titleIndex{
+  margin: 0;
+}
+
+/* termina I N D E X */
+
+
+
+
+/* R E G I S T R O  D E  P A C I E N T E */
+
+.registroPaciente{
+  width: 90%;
+  height: 920px;
+  background-color: white;
+  color: black;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding-left: 30px;
+  padding-top: 1px;
+}
+
+
+.tituloRegistro{
+  margin: 0;
+  border: 0;
+  margin-left: -30px;
+  padding-left: 20px;
+  background-color: rgb(53,204,174);
+}
+
+
+/* t e r m i n a  R E G I S T R O */
+
+
+
+/* C O N S U L T A */
+.consulta{
+  width: 800px;
+  height: 400px;
+  background-color: white;
+  color: black;
+  margin: 0 auto;
+  margin-left: 450px;
+  margin-top: -400px;
+}
+
+.parteIzq{
+  background-color: rgb(53,204,174);
+  text-align: center;
+  padding-top: 100px;
+  padding-left: 50px;
+  width: 300px;
+  height: 300px;
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.regisRight{
+  background-color: white;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+/* t e r m i n a  C O N S U L T A */
+
+
+
+
+/* a g r e g a r  U R G E N C I A S */
+.agregar-urgencia{
+  width: 800px;
+  height: 400px;
+  background-color: white;
+  color: black;
+  margin: 0 auto;
+  margin-left: 450px;
+  margin-top: -400px;
+}
+
+/* t e r m i n a  U R G E N C I A S */
+
+
+
+/* A G R E G A R  C I T A */
+.agregar-cita{
+  width: 800px;
+  height: 400px;
+  background-color: white;
+  color: black;
+  margin: 0 auto;
+  margin-left: 450px;
+  margin-top: -400px;
+}
+
+
+/* t e r m i n a  A G R E G A R  C I T A */
+
+
+/* A G R E G A R  I N T E R N A D O */
+.agregar-internado{
+  width: 800px;
+  height: 400px;
+  background-color: white;
+  color: black;
+  margin: 0 auto;
+  margin-left: 450px;
+  margin-top: -400px;
+}
+
+/* t e r m i n a  A G R E G A R  I N T E R N A D O */
+
+
+/* H I S T O R I A L*/
+.historial{
+  background-color: white;
+  width: 90%;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.filaArriba{
+  background-color: rgb(53,204,174);
+  display: table-row; 
+  font-weight: bolder;
+  text-align: center;
+}
+
+.fila{
+  display: table-row;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 0px;
+  text-align: justify;
+}
+
+/* A G R E G A R  I N V E N T A R I O*/
+.agregar-inventario{
+  width: 800px;
+  height: 400px;
+  background-color: white;
+  color: black;
+  margin: 0 auto;
+  margin-left: 450px;
+  margin-top: -400px;
+}
+
+/* t e r m i n a  A G R E G A R  I N V E N T A R I O */
+
+
+/* S E R V I C I O S */
+.servicios{
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 80%;
+  height: 200px;
+  display:flex;
+  justify-content: space-around;
+}
+
+.icono1{
+  width: 40%;
+}
+
+.servicio1{
+  border-radius: 50%;
+  padding-top: 40px;
+  text-align: center;
+  background-color: white;
+}
+
+.servicio2{
+  border-radius: 50%;
+  padding-top: 40px;
+  text-align: center;
+  background-color: white;
+}
+
+.servicio3{
+  border-radius: 50%;
+  padding-top: 40px;
+  text-align: center;
+  background-color: white;
+}
+
+.servicio4{
+  border-radius: 50%;
+  padding-top: 40px;
+  text-align: center;
+  background-color: white;
+}
+
+.servicio5{
+  border-radius: 50%;
+  padding-top: 40px;
+  text-align: center;
+  background-color: white;
+}
+
+/* P A G O */
+.container{
+  margin-top: 100px;
+}
+
+#Pagar{
+  background-color: rgb(182,79,232);
+  font-size: 18px;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  width: 25%;
+  height: 30px;
+  float: right;
+  margin-right: 50px;
+  margin-top: 10px;
+}
+/* t e r m i n a  P A G O */

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vetanimals</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" type="text/css" href="css/css-menu.css">
+
+</head>
+
+<body background="img/back1.jpg">
+	
+	<header>
+		
+		<div>
+			<img class="logo" src="img/logoConfondo.png">
+		</div>
+
+		<div>
+			<div id="sidebar" class="sidebar">
+    			<a href="#" class="boton-cerrar" onclick="ocultar()">&times;</a>
+				<ul class="menu">
+    				<li><a href="#" onclick="location.href='registro_paciente.html'">Registro</a></li>
+    				<li><a href="#"onclick="location.href='registrados.php'">Registrados</a></li>
+    				<li><a href="#"onclick="location.href='consulta.html'">Consulta</a></li>
+    				<li><a href="#"onclick="location.href='urgencias.html'">Urgencias</a></li>
+    				<li><a href="#"onclick="location.href='citas.html'">Citas</a></li>
+    				<li><a href="#"onclick="location.href='internados.html'">Internados</a></li>
+    				<li><a href="#"onclick="location.href='servicios.html'">Servicios</a></li>
+    				<li><a href="#"onclick="location.href='historial.html'">Historial</a></li>
+    				<li><a href="#"onclick="location.href='inventario.html'">Inventario</a></li>
+    				<li><a href="#"onclick="location.href='pago.html'">Pago</a></li>
+        			<li><a href="#"onclick="location.href='login.html'">Cerrar sesion</a></li>
+				</ul>
+			</div>
+			<div id="contenido">
+  				<p><a> <alt="menu" style="border-width: 0px"/></a></p>
+  				<a id="abrir" class="abrir-cerrar" href="javascript:void(0)" onclick="mostrar()"><img src="img/menu.png" width="30" height="30">
+  				</a><a id="cerrar" class="abrir-cerrar" href="#" onclick="ocultar()"><img src="img/menu.png" width="30" height="30"></a>
+			</div>
+		</div>
+	</header>
+
+	<section class="index">
+		
+			<!-- 1.- Registro de pacientes -->
+			<div class="modulo1" onclick="location.href='registro_paciente.html'">
+				<input class="icono" type="image" src="img/registro.png" alt="Submit" >
+				<h3 class="titleIndex"><b>Registro</b></h3>	
+			</div>
+
+			<!-- 2.- Pacientes registrados -->
+			<div class="modulo2" onclick="location.href='registrados.php'">
+				<input class="icono" type="image" src="img/empleado.png" alt="Submit" >
+				<h3 class="titleIndex"><b>Registrados</b></h3>
+			</div>
+			
+
+			<!-- 3.- Consulta -->
+			<div class="modulo3" onclick="location.href='consulta.html'">
+				<input class="icono" type="image" src="img/portapapeles.png" alt="Submit" >
+				<h3 class="titleIndex"><b>Consulta</b></h3>
+			</div>
+
+
+			<!-- 4.- Urgencias -->
+			<div class="modulo4" onclick="location.href='urgencias.html'">
+				<input class="icono" type="image" src="img/urgencias.png" alt="Submit" >
+				<h3 class="titleIndex"><b>Urgencias</b></h3>
+			</div>
+
+			<!-- 5.- Citas -->
+			<div class="modulo5" onclick="location.href='citas.html'">
+				<input class="icono" type="image" src="img/citas.png" alt="Submit">
+				<h3 class="titleIndex"><b>Citas</b></h3>
+			</div>
+
+			<!-- 6.- Internados -->
+			<div class="modulo6" onclick="location.href='internados.html'">
+				<input class="icono" type="image" src="img/tratamientos.png" alt="Submit" >
+				<h3 class="titleIndex"><b>Internados</b></h3>
+			</div>
+
+			<!-- 7.- Servicios -->
+			<div class="modulo7" onclick="location.href='servicios.html'">
+				<input class="icono" type="image" src="img/medico.png" alt="Submit" >
+				<h3 class="titleIndex"><b>Servicios</b></h3>
+			</div>
+		
+			<!-- 8.- Historial-->
+			<div class="modulo8" onclick="location.href='historial.html'">
+				<input class="icono" type="image" src="img/reloj.png" alt="Submit">
+				<h3 class="titleIndex"><b>Historial</b></h3>
+			</div>
+		
+			<!-- 9.- Inventario -->
+			<div class="modulo9" onclick="location.href='inventario.html'">
+				<input class="icono" type="image" src="img/inventario.png" alt="Submit">
+				<h3 class="titleIndex"><b>Inventario</b></h3>
+			</div>
+
+			<!-- 10.- Pago -->
+			<div class="modulo10" onclick="location.href='pago.html'">
+				<input class="icono" type="image" src="img/efectivo.png" alt="Submit">
+				<h3 class="titleIndex"><b>Pago</b></h3>
+			</div>
+		
+	</section>
+	
+	<script  src="js/menu-desp.js"></script>
+
+</body>
+</html>
+
+<!-- github starter pack-->

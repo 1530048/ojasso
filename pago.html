@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vetanimals</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" type="text/css" href="css/css-menu.css">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <script class="pago">
+        window.onload = function () {
+            let baseDeDatos = [
+                {
+                    id: 1,
+                    nombre: 'Baño',
+                    precio: 100
+                },
+                {
+                    id: 2,
+                    nombre: 'Corte de pelo',
+                    precio: 150
+                },
+                {
+                    id: 3,
+                    nombre: 'Cirugía',
+                    precio: 1500
+                },
+                {
+                    id: 4,
+                    nombre: 'Alojamiento',
+                    precio: 200
+                },
+                {
+                    id: 5,
+                    nombre: 'Esterilización',
+                    precio: 1500
+                },
+                {
+                    id: 6,
+                    nombre: 'Vacuna',
+                    precio: 250
+                }
+
+            ]
+            let $items = document.querySelector('#items');
+            let carrito = [];
+            let total = 0;
+            let $carrito = document.querySelector('#carrito');
+            let $total = document.querySelector('#total');
+            function renderItems () {
+                for (let info of baseDeDatos) {
+                    let miNodo = document.createElement('div');
+                    miNodo.classList.add('card', 'col-sm-4');
+                    let miNodoCardBody = document.createElement('div');
+                    miNodoCardBody.classList.add('card-body');
+                    let miNodoTitle = document.createElement('h5');
+                    miNodoTitle.classList.add('card-title');
+                    miNodoTitle.textContent = info['nombre'];
+                    let miNodoPrecio = document.createElement('p');
+                    miNodoPrecio.classList.add('card-text');
+                    miNodoPrecio.textContent =  '$'+ info['precio'] ;
+                    let miNodoBoton = document.createElement('button');
+                    miNodoBoton.classList.add('btn', 'btn-primary');
+                    miNodoBoton.textContent = '+';
+                    miNodoBoton.setAttribute('marcador', info['id']);
+                    miNodoBoton.addEventListener('click', anyadirCarrito);
+                    miNodoCardBody.appendChild(miNodoTitle);
+                    miNodoCardBody.appendChild(miNodoPrecio);
+                    miNodoCardBody.appendChild(miNodoBoton);
+                    miNodo.appendChild(miNodoCardBody);
+                    $items.appendChild(miNodo);
+                }
+            }
+            function anyadirCarrito () {
+                carrito.push(this.getAttribute('marcador'))
+                calcularTotal();
+                renderizarCarrito();
+            }
+
+            function renderizarCarrito () {
+                $carrito.textContent = '';
+                carrito.forEach(function (item, indice) {
+                    let miItem = baseDeDatos.filter(function(itemBaseDatos) {
+                        return itemBaseDatos['id'] == item;
+                    });
+                    let miNodo = document.createElement('li');
+                    miNodo.classList.add('list-group-item', 'text-right');
+                    miNodo.textContent = `${miItem[0]['nombre']} - $${miItem[0]['precio']}`;
+                    let miBoton = document.createElement('button');
+                    miBoton.classList.add('btn', 'btn-danger', 'mx-5');
+                    miBoton.textContent = 'X';
+                    miBoton.setAttribute('posicion', indice);
+                    miBoton.addEventListener('click', borrarItemCarrito);
+                    miNodo.appendChild(miBoton);
+                    $carrito.appendChild(miNodo);
+                })
+            }
+
+            function borrarItemCarrito () {
+                let posicion = this.getAttribute('posicion');
+                carrito.splice(posicion, 1);
+                renderizarCarrito();
+                calcularTotal();
+            }
+
+            function calcularTotal () {
+                total = 0;
+                for (let item of carrito) {
+                    let miItem = baseDeDatos.filter(function(itemBaseDatos) {
+                        return itemBaseDatos['id'] == item;
+                    });
+                    total = total + miItem[0]['precio'];
+                }
+                let totalDosDecimales = total.toFixed(2);
+                $total.textContent = totalDosDecimales;
+            }
+            renderItems();
+        } 
+    </script>
+</head>
+
+<body background="img/back1.jpg">
+	
+	<header>
+		
+		<div>
+			<img class="logo" src="img/logoConfondo.png" onclick="location.href='index.html'">
+		</div>
+		<div>
+			<div id="sidebar" class="sidebar">
+    	       <a href="#" class="boton-cerrar" onclick="ocultar()">&times;</a>
+		          <ul class="menu">
+                    <li><a href="#" onclick="location.href='registro_paciente.html'">Registro</a></li>
+    				<li><a href="#"onclick="location.href='registrados.php'">Registrados</a></li>
+    				<li><a href="#"onclick="location.href='consulta.html'">Consulta</a></li>
+    				<li><a href="#"onclick="location.href='urgencias.html'">Urgencias</a></li>
+    				<li><a href="#"onclick="location.href='citas.html'">Citas</a></li>
+    				<li><a href="#"onclick="location.href='internados.html'">Internados</a></li>
+    				<li><a href="#"onclick="location.href='servicios.html'">Servicios</a></li>
+    				<li><a href="#"onclick="location.href='historial.html'">Historial</a></li>
+    				<li><a href="#"onclick="location.href='inventario.html'">Inventario</a></li>
+    				<li><a href="#"onclick="location.href='pago.html'">Pago</a></li>
+        			<li><a href="#"onclick="location.href='login.html'">Cerrar sesion</a></li>
+                    </ul>
+                </div>
+            <div id="contenido">
+                <p><a> <alt="menu" style="border-width: 0px"/></a></p>
+                <a id="abrir" class="abrir-cerrar" href="javascript:void(0)" onclick="mostrar()"><img src="img/menu.png" width="30" height="30">
+                </a><a id="cerrar" class="abrir-cerrar" href="#" onclick="ocultar()"><img src="img/menu.png" width="30" height="30"></a>
+            </div>
+		</div>
+	</header>
+	
+    <div class="container">
+        <div class="row">
+            <main id="items" class="col-sm-8 row"></main>
+            <aside class="col-sm-4">
+                <h2>Carrito</h2>
+                <ul id="carrito" class="list-group"></ul>
+                <hr>
+                <p class="text-right">Total:$ <span id="total"></span></p>
+            </aside>
+        </div>
+        
+        <div>
+            <p class="text-right"><input type="submit" name="Pagar" id="Pagar" value="Pagar" onclick="location.href='pago.html'">
+        </div>
+       
+    </div> 
+<script  src="js/menu-desp.js"></script>
+
+	
+</body>
+</html>
